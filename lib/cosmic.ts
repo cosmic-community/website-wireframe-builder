@@ -56,7 +56,7 @@ export async function getPageSections() {
       .props(['id', 'title', 'slug', 'metadata'])
       .depth(1);
     
-    return response.objects.sort((a, b) => {
+    return response.objects.sort((a: any, b: any) => {
       const orderA = a.metadata?.display_order || 0;
       const orderB = b.metadata?.display_order || 0;
       return orderA - orderB;
