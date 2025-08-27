@@ -18,7 +18,11 @@
 
 @layer components {
   .wireframe-section {
-    @apply border-2 border-dashed border-wireframe-border bg-wireframe-bg relative min-h-[120px] rounded-lg p-4 transition-all duration-200 hover:bg-wireframe-hover hover:border-solid;
+    @apply border-2 border-dashed border-wireframe-border bg-wireframe-bg relative min-h-[120px] rounded-lg p-4 transition-all duration-200 hover:bg-wireframe-hover hover:border-solid hover:shadow-lg;
+  }
+  
+  .wireframe-section:hover {
+    @apply border-blue-400 bg-blue-50;
   }
   
   .wireframe-label {
@@ -46,7 +50,7 @@
   }
   
   .hover-details {
-    @apply absolute top-2 right-2 bg-white border border-gray-200 rounded-lg p-3 shadow-lg z-10 min-w-[250px] opacity-0 pointer-events-none transition-opacity duration-200;
+    @apply absolute top-2 right-12 bg-white border border-gray-200 rounded-lg p-3 shadow-lg z-10 min-w-[250px] opacity-0 pointer-events-none transition-opacity duration-200;
   }
   
   .wireframe-section:hover .hover-details {
